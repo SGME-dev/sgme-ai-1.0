@@ -8,25 +8,27 @@ script = ExtResource("1_c35dq")
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 10.0
-offset_top = 14.0
-offset_right = 853.0
-offset_bottom = 79.0
+offset_left = 112.0
+offset_top = 59.0
+offset_right = 838.0
+offset_bottom = 94.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 881.0
-offset_top = 19.0
-offset_right = 1121.0
-offset_bottom = 78.0
-theme_override_font_sizes/font_size = 40
+offset_left = 853.0
+offset_top = 62.0
+offset_right = 954.0
+offset_bottom = 93.0
 text = "send"
+metadata/_edit_use_anchors_ = true
 
 [node name="TextEdit2" type="TextEdit" parent="."]
-offset_left = 9.0
-offset_top = 101.0
-offset_right = 1136.0
-offset_bottom = 630.0
+offset_left = 101.0
+offset_top = 105.0
+offset_right = 957.0
+offset_bottom = 567.0
 editable = false
+metadata/_edit_use_anchors_ = true
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

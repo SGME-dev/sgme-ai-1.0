@@ -5,9 +5,7 @@ import google.generativeai as genai
 app = Flask(__name__)
 
 # Configure Gemini API
-GOOGLE_API_KEY = os.environ.get("GEMINI_API_KEY")
-if not GOOGLE_API_KEY:
-    raise ValueError("GEMINI_API_KEY environment variable not set.")
+GOOGLE_API_KEY = "AIzaSyDD9sV2q9RBE3ysQo8Gm3CFTkwKIsQxVJE"
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-2.0-flash')
 
