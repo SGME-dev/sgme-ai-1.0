@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var gemini_request: HTTPRequest = $HTTPRequest
 
-
+func _ready() -> void:
+	OS.shell_open("C:/Users/ezrag/OneDrive/Documents/sgme-ai-1.0/ai/ai.py")
 
 func send_to_gemini(user_input: String):
 	var url = "http://127.0.0.1:5000/generate" # Adjust if your Flask app runs on a different port
@@ -24,6 +25,7 @@ func _on_http_request_request_completed(result: int, response_code: int, headers
 		else:
 			printerr("Error parsing Gemini response:", body.get_string_from_utf8())
 	else:
+		OS.alert("API is Missing: Could not find ai.py running.")
 		printerr("Gemini request failed:", result, response_code)
 		printerr("Headers:", headers)
 		printerr("Body:", body.get_string_from_utf8())
